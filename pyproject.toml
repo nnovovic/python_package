@@ -1,0 +1,29 @@
+[project]
+name = "python-package"
+description = "PythonPackage"
+dynamic = ['version']
+authors = [{ name = "Nemanja Novović", email = "nemanja.novovic@icloud.com" }]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+requires-python = ">=3.9"
+dependencies = ["flask>=2.2.3"]
+
+[project.optional-dependencies]
+test = ["flake8>=6.0.0", "pytest>=7.2.2"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "python_package.__version__" }
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
