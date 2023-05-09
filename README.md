@@ -2,6 +2,7 @@
 
 This GitHub repository demonstrates how to create a Python package with a project structure that follows best practices,
 including tox testing. The repository contains sample code, tests, and configuration files to help you get started.
+Additionally, this package can be used as a private package that is installable directly from a GitHub repository.
 
 This repository features a Flask application that showcases how to execute shell commands and retrieve their output. 
 Although the application is straightforward and designed for demonstration purposes, the primary focus is on presenting best practices for structuring Python packages.
